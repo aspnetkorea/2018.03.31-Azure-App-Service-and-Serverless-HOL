@@ -42,35 +42,50 @@ URL : https://onoffmix.com/event/131652
 
 ## Azure Portal 설정
 
-#### 리소스 그룹 생성   
-- 이름 : rg-aspkr-bootcamp   
-- 위치 : Southeast Asia  
+#### 리소스 그룹(Resource Group) 만들기
+- Name : rg-aspkr-bootcamp
+- Location : Southeast Asia
 
-#### As plan 생성  
-- 이름 : aspkr-BootCamp-Dev-Plan  
-- 가격 : S1  
-- 위치 : Southeast Asia   
+#### App Service Plan 만들기
+- Name : aspkr-BootCamp-Dev-Plan  
+- Location : Southeast Asia 
+- Resource group : rg-aspkr-bootcamp 선택
+- OS : Windows
+- Pricing Tier : B1 Basic
 
-#### 저장소 계정 생성   
-- 이름 : aspkrholstor<전화번호 뒷자리4>  
-- 위치 : Southeast Asia  
-- Replication : LRS   
+#### Storage account - blob, file, table, queue 만들기
+- Name : aspkrholstor<전번4자리>
+- Replication : LRS  
+- Location : Southeast Asia
+- Resource group : rg-aspkr-bootcamp 선택
 
-#### Web App 생성   
-- 이름 : aspkr-hol1-<전화번호 뒷자리4>, (실습 1)
-    - AS-Plan : aspkr-BootCamp-Dev-Plan 선택 
-- 이름 : aspkr-hol2-<전화번호 뒷자리4>, (실습 2)
-    - AS-Plan : aspkr-BootCamp-Dev-Plan 선택  
+#### Web App 만들기
+- Name : aspkr-hol1-<전번4>, 실습 1용
+- Name : aspkr-hol2-<전번4>, 실습 2용
+- AS-Plan : aspkr-BootCamp-Dev-Plan 선택  
 
-#### Function App 생성   
-- 이름 : aspkrFunc1-<전화번호 뒷자리4>, 일반 실습용  
-    - AS-Plan : aspkr-BootCamp-Dev-Plan 선택  
-- 이름 : aspkrFunc2-<전화번호 뒷자리4>, CLI 실습용  
-
-#### Face API 생성  
-- 이름 : aspkr-FaceApi  
-- 위치 : WestUS  
-- 가격 : F0 혹은 S0  
+#### Function App 만들기
+- Name : aspkrFunc1<전번4자리>
+- Resource group : rg-aspkr-bootcamp 선택
+- Hosting Plan : App Service Plan
+- App Service Plan/Location : aspkr-BootCamp-Dev-Plan 선택
+- Storage : aspkrholstor**** 선택 
 
 #### Logic App  
-- 이름 : FB-TTS-MAIL 
+- Name : FB-TTS-MAIL 
+
+#### Face API 생성  
+- Name : FaceApi-dev
+- Location : West Us
+- Pricing Tier : F0
+- Resource group : rg-aspkr-bootcamp 선택
+
+#### 저장소 계정 안에 Blob Container 만들기 
+- Name : card-input, card-output, audio
+- Public access level : Blob (anonymous read access for blobs only)
+
+#### 실습 시작 전에 다음 항목들을 별도로 저장
+- Storage Account 연결 문자열 설정
+- Face API의 Endpoint와 Key
+
+
