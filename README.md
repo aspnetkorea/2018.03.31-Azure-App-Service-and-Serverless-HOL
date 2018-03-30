@@ -61,7 +61,8 @@ URL : https://onoffmix.com/event/131652
 
 #### Web App 만들기
 - Name : aspkr-hol1-<전번4>, 실습 1용
-- Name : aspkr-hol2-<전번4>, 실습 2용
+- Name : aspkr-hol2-1-<전번4>, 실습 2-1용
+- Name : aspkr-hol2-2-<전번4>, 실습 2-2용
 - AS-Plan : aspkr-BootCamp-Dev-Plan 선택  
 
 #### Function App 만들기
