@@ -40,6 +40,12 @@ URL : https://onoffmix.com/event/131652
 - Azure Functions Pack 설치 (CMD 명령 프롬프트에서 실행) 
     - npm i -g azure-functions-pack 
 
+#### (옵션) 다음은 실습2에서 사용하는 프로그램으로 필수는 아닙니다.
+- Visual Studio Community 2017 설치
+    - https://www.visualstudio.com/ko/downloads/
+- Eclipse IDE for Java EE Developers
+    - http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3
+
 ## Azure Portal 설정
 
 #### 리소스 그룹(Resource Group) 만들기
