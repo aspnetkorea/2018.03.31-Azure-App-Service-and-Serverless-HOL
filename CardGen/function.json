@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "card-output/{name}.jpg",
+      "connection": "ServerlessStorage",
+      "direction": "out"
+    },
+    {
+      "type": "blobTrigger",
+      "name": "image",
+      "path": "card-input/{name}.jpg",
+      "connection": "ServerlessStorage",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
